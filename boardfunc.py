@@ -1,11 +1,4 @@
-# Print welcome message
-print("Welcome to TicTacToe!")
-# Get char
-cchar = input("Would you like to be \'X\' or \'O\'?")
-# Check if char is 'X' or 'O'
-
-board = range(0, 40)
-
+board = list(range(0, 40));
 def drawinstructionBoard():
     print('    |    |')
     print(' ' + str(board[17]) + ' | ' + str(board[18]) + ' | ' + str(board[19]))
@@ -79,11 +72,3 @@ def drawBoard():
     print('   |   |')
     print(' ' + board[31] + ' | ' + board[32] + ' | ' + board[33])
     print('   |   |')
-
-a=input("Do you want instructions?")
-if a=="YES":
-    drawinstructionBoard()
- 
-if a=="NO":
-     drawBoard()
-input()
