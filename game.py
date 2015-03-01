@@ -6,7 +6,11 @@ cchar = input("Would you like to be \'X\' or \'O\'?")
 
 board = range(0, 40)
 
+<<<<<<< HEAD
 def drawinstructionBoard():
+=======
+def drawinstructionBoard(a):
+>>>>>>> origin/master
     print('    |    |')
     print(' ' + str(board[17]) + ' | ' + str(board[18]) + ' | ' + str(board[19]))
     print('    |    |')
@@ -42,7 +46,13 @@ def drawinstructionBoard():
     print('    |    |')
     print(' ' + str(board[31]) + ' | ' + str(board[32]) + ' | ' + str(board[33]))
     print('    |    |')
+<<<<<<< HEAD
 
+=======
+a=input("Do you want instructions?")
+if a=="YES":
+    drawinstructionBoard(17)
+>>>>>>> origin/master
 def drawBoard():
     print('   |   |')
     print(' ' + board[17] + ' | ' + board[18] + ' | ' + board[19])
@@ -79,11 +89,14 @@ def drawBoard():
     print('   |   |')
     print(' ' + board[31] + ' | ' + board[32] + ' | ' + board[33])
     print('   |   |')
+<<<<<<< HEAD
 
 a=input("Do you want instructions?")
 if a=="YES":
     drawinstructionBoard()
  
+=======
+>>>>>>> origin/master
 if a=="NO":
      drawBoard()
 input()
