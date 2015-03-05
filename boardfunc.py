@@ -1,4 +1,9 @@
 board = list(range(0, 40));
+
+def initBoard():
+    for i in range(0, 40):
+        board[i] = ' '
+
 def drawinstructionBoard():
     print('    |    |')
     print(' ' + str(board[17]) + ' | ' + str(board[18]) + ' | ' + str(board[19]))
