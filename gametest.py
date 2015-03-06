@@ -2,21 +2,23 @@ from boardfunc import *
 
 # Print welcome message
 print("Welcome to TicTacToe!")
+
 # Get char
 char = input("Would you like to be \'X\' or \'O\'?")
-# Check if char is 'X' or 'O'
 
+# TODO: Check if char is 'X' or 'O'
 
-a=input("Do you want instructions?")
-if a=="YES":
+# Check whether or not to display instructions
+a = input("Do you want instructions?").upper()
+if a.startswith("Y"):
     drawinstructionBoard()
- 
-if a=="NO":
-    initBoard()
-    drawBoard()
+
+# Initialize and draw board
+initBoard()
+drawBoard()
 
 def placement(a):
-    a=input('Where do you want to play')
+    a = input("Where do you want to play?")
     if a==17:
         print('   |   |')
         print(' ' + 'X ' + ' | ' + ' ' + ' | ' + ' ')
