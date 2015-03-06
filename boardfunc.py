@@ -5,6 +5,7 @@ def initBoard():
         board[i] = ' '
 
 def drawinstructionBoard():
+    board = list(range(0, 40));
     print('    |    |')
     print(' ' + str(board[17]) + ' | ' + str(board[18]) + ' | ' + str(board[19]))
     print('    |    |')
