@@ -11,7 +11,7 @@ char = input("Would you like to be \'X\' or \'O\'?")
 # Check whether or not to display instructions
 a = input("Do you want instructions?").upper()
 if a.startswith("Y"):
-    drawinstructionBoard()
+    drawInstructionBoard()
 
 # Initialize and draw board
 initBoard()
