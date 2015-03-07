@@ -1,10 +1,13 @@
+# Initialize board
 board = list(range(0, 40));
 
+# Clear board
 def initBoard():
     for i in range(0, 40):
         board[i] = ' '
 
-def drawinstructionBoard():
+# Display instructions
+def drawInstructionBoard():
     board = list(range(0, 40));
     print('    |    |')
     print(' ' + str(board[17]) + ' | ' + str(board[18]) + ' | ' + str(board[19]))
@@ -42,6 +45,7 @@ def drawinstructionBoard():
     print(' ' + str(board[31]) + ' | ' + str(board[32]) + ' | ' + str(board[33]))
     print('    |    |')
 
+# Display board
 def drawBoard():
     print('   |   |')
     print(' ' + str(board[17]) + ' | ' + str(board[18]) + ' | ' + str(board[19]))
@@ -78,3 +82,10 @@ def drawBoard():
     print('   |   |')
     print(' ' + board[31] + ' | ' + board[32] + ' | ' + board[33])
     print('   |   |')
+
+# Make given move
+def move(n, c):
+    if (board[n] == ' '):
+        board[n] = c
+        return True
+    return False
