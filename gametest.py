@@ -15,4 +15,11 @@ if a.startswith("Y"):
 
 # Initialize and draw board
 initBoard()
-drawBoard()
+
+# Start the game
+while True:
+    drawBoard()
+    n = int(input("Where would you like to move?"))
+    while not move(n, char):
+        print("Invalid move!")
+    input()
