@@ -20,6 +20,6 @@ initBoard()
 while True:
     drawBoard()
     n = int(input("Where would you like to move?"))
-    while not move(n, char):
+    if not move(n, char):
         print("Invalid move!")
     input()
