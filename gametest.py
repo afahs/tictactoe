@@ -5,7 +5,10 @@ print("Welcome to TicTacToe!")
 
 # Get char
 char = input("Would you like to be \'X\' or \'O\'?")
-
+if char==X:
+    compchar=Y
+if char==Y:
+    compchar=X
 # TODO: Check if char is 'X' or 'O'
 
 # Check whether or not to display instructions
