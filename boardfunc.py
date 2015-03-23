@@ -90,7 +90,7 @@ def move(n, c):
         return True
     return False
 #win conditions
-def isplayerWinner(board,char):
+def isWinner(board,char):
     return((board[17]==char and board[18]==char and board[19]==char) or
            (board[14]==char and board[15]==char and board[16]==char) or
            (board[11]==char and board[12]==char and board[13]==char) or
