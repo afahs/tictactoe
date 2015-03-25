@@ -90,54 +90,95 @@ def move(n, c):
         return True
     return False
 #win conditions
-def isWinner(board,char):
-    return((board[17]==char and board[18]==char and board[19]==char) or
-           (board[14]==char and board[15]==char and board[16]==char) or
-           (board[11]==char and board[12]==char and board[13]==char) or
-           (board[17]==char and board[15]==char and board[13]==char) or
-           (board[19]==char and board[15]==char and board[11]==char) or
-           (board[17]==char and board[14]==char and board[11]==char) or
-           (board[18]==char and board[15]==char and board[12]==char) or
-           (board[19]==char and board[16]==char and board[13]==char) or
+
+
+def isWinnerX(board,char):
+    char1='X'
+    return((board[17]==char1 and board[18]==char1 and board[19]==char1) or
+           (board[14]==char1 and board[15]==char1 and board[16]==char1) or
+           (board[11]==char1 and board[12]==char1 and board[13]==char1) or
+           (board[17]==char1 and board[15]==char1 and board[13]==char1) or
+           (board[19]==char1 and board[15]==char1 and board[11]==char1) or
+           (board[17]==char1 and board[14]==char1 and board[11]==char1) or
+           (board[18]==char1 and board[15]==char1 and board[12]==char1) or
+           (board[19]==char1 and board[16]==char1 and board[13]==char1) or
 #first board
-           (board[27]==char and board[28]==char and board[29]==char) or
-           (board[24]==char and board[25]==char and board[26]==char) or
-           (board[21]==char and board[22]==char and board[23]==char) or
-           (board[27]==char and board[25]==char and board[23]==char) or
-           (board[29]==char and board[25]==char and board[21]==char) or
-           (board[27]==char and board[24]==char and board[21]==char) or
-           (board[28]==char and board[25]==char and board[22]==char) or
-           (board[29]==char and board[26]==char and board[23]==char) or
+           (board[27]==char1 and board[28]==char1 and board[29]==char1) or
+           (board[24]==char1 and board[25]==char1 and board[26]==char1) or
+           (board[21]==char1 and board[22]==char1 and board[23]==char1) or
+           (board[27]==char1 and board[25]==char1 and board[23]==char1) or
+           (board[29]==char1 and board[25]==char1 and board[21]==char1) or
+           (board[27]==char1 and board[24]==char1 and board[21]==char1) or
+           (board[28]==char1 and board[25]==char1 and board[22]==char1) or
+           (board[29]==char1 and board[26]==char1 and board[23]==char1) or
 #second board
-           (board[37]==char and board[38]==char and board[39]==char) or
-           (board[34]==char and board[35]==char and board[36]==char) or
-           (board[31]==char and board[32]==char and board[33]==char) or
-           (board[37]==char and board[35]==char and board[33]==char) or
-           (board[39]==char and board[35]==char and board[31]==char) or
-           (board[37]==char and board[34]==char and board[31]==char) or
-           (board[38]==char and board[35]==char and board[32]==char) or
-           (board[39]==char and board[36]==char and board[33]==char) or
+           (board[37]==char1 and board[38]==char1 and board[39]==char1) or
+           (board[34]==char1 and board[35]==char1 and board[36]==char1) or
+           (board[31]==char1 and board[32]==char1 and board[33]==char1) or
+           (board[37]==char1 and board[35]==char1 and board[33]==char1) or
+           (board[39]==char1 and board[35]==char1 and board[31]==char1) or
+           (board[37]==char1 and board[34]==char1 and board[31]==char1) or
+           (board[38]==char1 and board[35]==char1 and board[32]==char1) or
+           (board[39]==char1 and board[36]==char1 and board[33]==char1) or
 #third board
-           (board[17]==char and board[27]==char and board[37]==char) or
-           (board[18]==char and board[28]==char and board[38]==char) or
-           (board[19]==char and board[29]==char and board[39]==char) or
-           (board[14]==char and board[24]==char and board[34]==char) or
-           (board[15]==char and board[25]==char and board[35]==char) or
-           (board[16]==char and board[26]==char and board[36]==char) or
-           (board[11]==char and board[21]==char and board[31]==char) or
-           (board[12]==char and board[22]==char and board[32]==char) or
-           (board[13]==char and board[23]==char and board[33]==char) or
-           (board[17]==char and board[25]==char and board[33]==char) or
-           (board[11]==char and board[25]==char and board[39]==char) or
-           (board[13]==char and board[25]==char and board[37]==char) or
-           (board[19]==char and board[25]==char and board[31]==char))
+           (board[17]==char1 and board[27]==char1 and board[37]==char1) or
+           (board[18]==char1 and board[28]==char1 and board[38]==char1) or
+           (board[19]==char1 and board[29]==char1 and board[39]==char1) or
+           (board[14]==char1 and board[24]==char1 and board[34]==char1) or
+           (board[15]==char1 and board[25]==char1 and board[35]==char1) or
+           (board[16]==char1 and board[26]==char1 and board[36]==char1) or
+           (board[11]==char1 and board[21]==char1 and board[31]==char1) or
+           (board[12]==char1 and board[22]==char1 and board[32]==char1) or
+           (board[13]==char1 and board[23]==char1 and board[33]==char1) or
+           (board[17]==char1 and board[25]==char1 and board[33]==char1) or
+           (board[11]==char1 and board[25]==char1 and board[39]==char1) or
+           (board[13]==char1 and board[25]==char1 and board[37]==char1) or
+           (board[19]==char1 and board[25]==char1 and board[31]==char1))
 #cross board conditions
-def changechars():
-    global n
-    if n == "X":
-        n = "Y"
-    elif n == "Y":
-        n = "X"
+
+def isWinnerO(board,char):
+    char2='O'
+    return((board[17]==char2 and board[18]==char2 and board[19]==char2) or
+           (board[14]==char2 and board[15]==char2 and board[16]==char2) or
+           (board[11]==char2 and board[12]==char2 and board[13]==char2) or
+           (board[17]==char2 and board[15]==char2 and board[13]==char2) or
+           (board[19]==char2 and board[15]==char2 and board[11]==char2) or
+           (board[17]==char2 and board[14]==char2 and board[11]==char2) or
+           (board[18]==char2 and board[15]==char2 and board[12]==char2) or
+           (board[19]==char2 and board[16]==char2 and board[13]==char2) or
+#first board
+           (board[27]==char2 and board[28]==char2 and board[29]==char2) or
+           (board[24]==char2 and board[25]==char2 and board[26]==char2) or
+           (board[21]==char2 and board[22]==char2 and board[23]==char2) or
+           (board[27]==char2 and board[25]==char2 and board[23]==char2) or
+           (board[29]==char2 and board[25]==char2 and board[21]==char2) or
+           (board[27]==char2 and board[24]==char2 and board[21]==char2) or
+           (board[28]==char2 and board[25]==char2 and board[22]==char2) or
+           (board[29]==char2 and board[26]==char2 and board[23]==char2) or
+#second board
+           (board[37]==char2 and board[38]==char2 and board[39]==char2) or
+           (board[34]==char2 and board[35]==char2 and board[36]==char2) or
+           (board[31]==char2 and board[32]==char2 and board[33]==char2) or
+           (board[37]==char2 and board[35]==char2 and board[33]==char2) or
+           (board[39]==char2 and board[35]==char2 and board[31]==char2) or
+           (board[37]==char2 and board[34]==char2 and board[31]==char2) or
+           (board[38]==char2 and board[35]==char2 and board[32]==char2) or
+           (board[39]==char2 and board[36]==char2 and board[33]==char2) or
+#third board
+           (board[17]==char2 and board[27]==char2 and board[37]==char1) or
+           (board[18]==char2 and board[28]==char2 and board[38]==char1) or
+           (board[19]==char2 and board[29]==char2 and board[39]==char1) or
+           (board[14]==char2 and board[24]==char2 and board[34]==char1) or
+           (board[15]==char2 and board[25]==char2 and board[35]==char1) or
+           (board[16]==char2 and board[26]==char2 and board[36]==char1) or
+           (board[11]==char2 and board[21]==char2 and board[31]==char1) or
+           (board[12]==char2 and board[22]==char2 and board[32]==char1) or
+           (board[13]==char2 and board[23]==char2 and board[33]==char1) or
+           (board[17]==char2 and board[25]==char2 and board[33]==char1) or
+           (board[11]==char2 and board[25]==char2 and board[39]==char1) or
+           (board[13]==char2 and board[25]==char2 and board[37]==char1) or
+           (board[19]==char2 and board[25]==char2 and board[31]==char1))
+#cross board conditions
  
     
     

@@ -2,7 +2,8 @@ from boardfunc import *
 
 # Print welcome message
 print("Welcome to TicTacToe!")
-
+char1='X'
+char2='Y'
 # Get char
 char = input("Would you like to be \'X\' or \'O\'?")
 if char == 'X':
@@ -19,14 +20,24 @@ if a.startswith("Y"):
 # Initialize and draw board
 initBoard()
 
+def changechars():
+    global char
+    if char == "X":
+        char = "O"
+    elif char == "O":
+        char = "X"
+
 # Start the game
 while True:
     drawBoard()
     n = int(input("Where would player one like to move?"))
+    changechars()
     if not move(n, char):
         print("Invalid move!")
-    if isWinner(board,char):
-        print("You win!")
+    if isWinnerX(board,char):
+        print("X wins!")
+    if isWinnerO(board,char):
+        print("O wins!")
     input()
     
     
