@@ -132,8 +132,12 @@ def isWinner(board,char):
            (board[13]==char and board[25]==char and board[37]==char) or
            (board[19]==char and board[25]==char and board[31]==char))
 #cross board conditions
-
-
+def changechars():
+    global n
+    if n == "X":
+        n = "Y"
+    elif n == "Y":
+        n = "X"
  
     
     

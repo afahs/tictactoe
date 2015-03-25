@@ -27,7 +27,6 @@ while True:
         print("Invalid move!")
     if isWinner(board,char):
         print("You win!")
-    n2 = int(input("Where would player two like to move?"))
     input()
     
     
