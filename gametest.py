@@ -1,14 +1,16 @@
 from boardfunc import *
-
+import random
 # Print welcome message
 print("Welcome to TicTacToe!")
 
 # Get char
-char = input("Would player two like to be \'X\' or \'O\'?")
-if char == 'X':
-    player2char='O'
-if char=='O':
-    player2char='X'
+char = input("Would player two like to be \'X\' or \'O\'?").upper()
+if not (char=='X' or char=='O'):
+    print("Invalid move, your character will be selected randomly")
+    if random.randint(1,2)==1:
+        char='X'
+    else:
+        char='O'
 # TODO: Check if char is 'X' or 'O'
 
 # Check whether or not to display instructions
@@ -30,7 +32,10 @@ def changechars():
 while True:
     drawBoard()
     changechars()
-    n = int(input("Where would " + char + "like to move?"))
+    n = int(input("Where would " + char + " like to move?"))
+    if not (n > 10 and n < 40):
+        print("Invlaid move, your position will be selected randomly")
+        n=random.randint(11,39)
     if not move(n, char):
         print("Invalid move!")
     if isWinnerX(board,char):

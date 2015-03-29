@@ -165,19 +165,19 @@ def isWinnerO(board,char):
            (board[38]==char2 and board[35]==char2 and board[32]==char2) or
            (board[39]==char2 and board[36]==char2 and board[33]==char2) or
 #third board
-           (board[17]==char2 and board[27]==char2 and board[37]==char1) or
-           (board[18]==char2 and board[28]==char2 and board[38]==char1) or
-           (board[19]==char2 and board[29]==char2 and board[39]==char1) or
-           (board[14]==char2 and board[24]==char2 and board[34]==char1) or
-           (board[15]==char2 and board[25]==char2 and board[35]==char1) or
-           (board[16]==char2 and board[26]==char2 and board[36]==char1) or
-           (board[11]==char2 and board[21]==char2 and board[31]==char1) or
-           (board[12]==char2 and board[22]==char2 and board[32]==char1) or
-           (board[13]==char2 and board[23]==char2 and board[33]==char1) or
-           (board[17]==char2 and board[25]==char2 and board[33]==char1) or
-           (board[11]==char2 and board[25]==char2 and board[39]==char1) or
-           (board[13]==char2 and board[25]==char2 and board[37]==char1) or
-           (board[19]==char2 and board[25]==char2 and board[31]==char1))
+           (board[17]==char2 and board[27]==char2 and board[37]==char2) or
+           (board[18]==char2 and board[28]==char2 and board[38]==char2) or
+           (board[19]==char2 and board[29]==char2 and board[39]==char2) or
+           (board[14]==char2 and board[24]==char2 and board[34]==char2) or
+           (board[15]==char2 and board[25]==char2 and board[35]==char2) or
+           (board[16]==char2 and board[26]==char2 and board[36]==char2) or
+           (board[11]==char2 and board[21]==char2 and board[31]==char2) or
+           (board[12]==char2 and board[22]==char2 and board[32]==char2) or
+           (board[13]==char2 and board[23]==char2 and board[33]==char2) or
+           (board[17]==char2 and board[25]==char2 and board[33]==char2) or
+           (board[11]==char2 and board[25]==char2 and board[39]==char2) or
+           (board[13]==char2 and board[25]==char2 and board[37]==char2) or
+           (board[19]==char2 and board[25]==char2 and board[31]==char2))
 #cross board conditions
  
     
