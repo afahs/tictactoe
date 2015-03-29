@@ -32,8 +32,8 @@ def changechars():
 while True:
     drawBoard()
     changechars()
-    n = int(input("Where would " + char + " like to move?"))
-    if not (n > 10 and n < 40):
+    n = input("Where would " + char + " like to move?")
+    if not (n==str):
         print("Invlaid move, your position will be selected randomly")
         n=random.randint(11,39)
     if not move(n, char):
