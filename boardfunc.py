@@ -1,15 +1,6 @@
 # Initialize board
 board = list(range(0, 40));
-
-def getInt(prompt):
-	while True:
-		i = input(prompt)
-		try:
-			i = int(i)
-		except ValueError:
-			continue
-		return i
-	    
+    
 # Clear board
 def initBoard():
     for i in range(0, 40):
