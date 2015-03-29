@@ -6,7 +6,7 @@ print("Welcome to TicTacToe!")
 # Get char
 char = input("Would player two like to be \'X\' or \'O\'?").upper()
 if not (char=='X' or char=='O'):
-    print("Invalid move, your character will be selected randomly")
+    print("Invalid choice, your character will be selected randomly")
     if random.randint(1,2)==1:
         char='X'
     else:
@@ -33,9 +33,13 @@ while True:
     drawBoard()
     changechars()
     n = input("Where would " + char + " like to move?")
-    if not (n==str):
-        print("Invlaid move, your position will be selected randomly")
-        n=random.randint(11,39)
+    if n=="":
+         print("Invlaid move, your position will be selected randomly")
+         n=random.randint(11,39)
+    n=int(n)
+    if not (n>10 and n<40):
+         print("Invlaid move, your position will be selected randomly")
+         n=random.randint(11,39)
     if not move(n, char):
         print("Invalid move!")
     if isWinnerX(board,char):
