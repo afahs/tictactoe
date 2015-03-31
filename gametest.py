@@ -35,7 +35,10 @@ while True:
     n = input("Where would " + char + " like to move?")
     if n=="":
          print("Invlaid move, your position will be selected randomly")
-         n=random.randint(11,39)
+         n=str(random.randint(11,39))
+    if not(n.startswith('1')) or not(n.startswith('2')) or (n.startswith('3')):
+           print("Invlaid move, your position will be selected randomly")
+           n=str(random.randint(11,39))  
     n=int(n)
     if not (n>10 and n<40):
          print("Invlaid move, your position will be selected randomly")
