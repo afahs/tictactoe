@@ -36,7 +36,7 @@ while True:
     if n=="":
          print("Invlaid move, your position will be selected randomly")
          n=str(random.randint(11,39))
-    if not(n.startswith('1') or (n.startswith('2')) or (n.startswith('3'))):
+    elif not(n.startswith('1') or (n.startswith('2')) or (n.startswith('3'))):
            print("Invlaid move, your position will be selected randomly")
            n=str(random.randint(11,39))  
     n=int(n)
